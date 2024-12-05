@@ -1,27 +1,30 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Scanner;
+package day10;
 
 public class Main {
 
-   void  number(int age){
-        if (age<=12){
-            System.out.println("you are under 13");
-        } else if (age<=19) {
-            System.out.println("you are an teenager");
-        } else {
-            System.out.println("you are an adult");
-        }
-    }
-    public static void main(String[] args) {
+	public static void main(String[] args) {
+		Car car1=new Car();
+		
+		System.out.println(car1.make);
+		System.out.println(car1.year);
+		
+		System.out.println("");
+		
+Car car2=new Car("mahindra");
+		
+		System.out.println(car2.make);
+		System.out.println(car2.year);
+		
+		System.out.println("");
+		
+Car car3=new Car("tata",2003);
+		
+		System.out.println(car3.make);
+		System.out.println(car3.year);
+		System.out.println("");
+		
+		Car car4=new Car();
+		car4.displayCarDetails("audi", 2043);
+	}
+	}
 
-       Scanner scanner=new Scanner(System.in);
-
-       Main user=new Main();
-        System.out.print("Enter your age: ");
-       int userAge=scanner.nextInt();
-
-       user.number(userAge);
-
-        }
-    }
