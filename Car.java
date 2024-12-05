@@ -22,7 +22,7 @@ public class Car {
 	}
 	
 	
-   void displayCarDetails(String make,int year) {
+   void displayCarDetails() {
 	   System.out.println(make);
 	   System.out.println(year);
   }
