@@ -31,7 +31,10 @@ public class Inheritance {
 	
 	Dog dog=new Dog();
 	
+	Cat cat=new Cat();
+	
 	dog.makeSound();
+	cat.makeSound();
 	
 	
 	
