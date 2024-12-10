@@ -1,41 +1,39 @@
 package day14;
 
-  class Animal{
-	  
-	  void sound() {
-		  System.out.println("Animal sound");
-	  }
-	  
-	  void eat() {
-		  System.out.println("Animal can eat");
-	  }
-  }
-
-  class Lion extends Animal{
-	  @Override
-	  void sound() {
-		  System.out.println("Lion roars");
-	  }
-  }
-
-class Cat extends Animal{
-     @Override	
-	void eat() {
-		System.out.println("Cat eats fish");
+ 
+class Animal{
+	
+	void makeSound() {
+		System.out.println("this animal makes a sound");
 	}
 }
+
+class Dog extends Animal{
+	@Override
+	void makeSound() {
+		System.out.println("the dog barks");
+	}
+}
+
+class Cat extends Animal{
+	
+	@Override
+	void makeSound() {
+		System.out.println("the cat meows");
+	}
+}
+
+
+
 
 public class Inheritance {
  public static void main(String[] args) {
 	
-	 Lion lion=new Lion();
-	 
-	lion.sound();
-	 
-	Cat cat =new Cat();
+	Dog dog=new Dog();
 	
-	cat.eat();
-	cat.sound();
+	dog.makeSound();
+	
+	
 	
 }
 	
