@@ -7,7 +7,19 @@ public class User {
         Scanner sc = new Scanner(System.in);
         IndianBank bank = new IndianBank();
 
+        System.out.println("Enter Account Number: ");
+        bank.setAcnum(sc.nextLong());
+        sc.nextLine();
+        System.out.println("Enter Balance: ");
+        bank.setBalance(sc.nextDouble());
+        sc.nextLine();
+
+        System.out.println("Enter name: ");
+        bank.setName(sc.nextLine());
+
         boolean isTrue = true;
+
+
 
 
         System.out.println("Enter your pin: ");
@@ -36,7 +48,8 @@ public class User {
                     if (withdrawAmount <= bank.getBalance()) {
                         bank.setBalance(bank.getBalance() - withdrawAmount);
                         System.out.println("You have successfully withdrawn. Your current balance is: " + bank.getBalance());
-                    } else {
+                    }
+                        else {
                         System.out.println("Insufficient funds. Withdrawal failed.");
                     }
 
@@ -44,6 +57,10 @@ public class User {
                 } else if (decision == 0) {
                     isTrue = false;
                     System.out.println("Thank you for using IndianBank!");
+                    System.out.println("your Account number is: "+bank.getAcnum());
+                    System.out.println("your balance is: "+bank.getBalance());
+                    System.out.println("Account Holder Name:  "+bank.getName());
+
 
 
                 } else {

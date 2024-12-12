@@ -1,6 +1,6 @@
 public class IndianBank {
 
-  private int acnum = 123456789;
+  private Long acnum = 0l;
    private double balance = 20000;
     private String name="zainul";
 
@@ -12,11 +12,11 @@ public class IndianBank {
 
     }
 
-    public int getAcnum() {
+    public long getAcnum() {
         return acnum;
     }
 
-    public void setAcnum(int acnum) {
+    public void setAcnum(long acnum) {
         this.acnum = acnum;
     }
 
