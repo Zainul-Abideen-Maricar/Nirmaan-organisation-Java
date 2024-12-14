@@ -1,8 +1,8 @@
 public class IndianBank {
 
   private Long acnum = 0l;
-   private double balance = 20000;
-    private String name="zainul";
+   private double balance = 0;
+    private String name=null;
 
 
    private int pin=2003;

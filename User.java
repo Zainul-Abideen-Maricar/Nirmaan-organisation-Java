@@ -10,17 +10,11 @@ public class User {
         System.out.println("Enter Account Number: ");
         bank.setAcnum(sc.nextLong());
         sc.nextLine();
-        System.out.println("Enter Balance: ");
-        bank.setBalance(sc.nextDouble());
-        sc.nextLine();
 
         System.out.println("Enter name: ");
         bank.setName(sc.nextLine());
 
         boolean isTrue = true;
-
-
-
 
         System.out.println("Enter your pin: ");
         int pin = sc.nextInt();
@@ -41,18 +35,26 @@ public class User {
                     System.out.println("Your current balance is: " + bank.getBalance());
 
 
-                } else if (decision == 2) {
-                    System.out.println("Enter your amount to withdraw: ");
-                    double withdrawAmount = sc.nextDouble();
+                }
+                else if (decision == 2) {
+                    System.out.println("Enter the pin number: ");
+                    int pin1=sc.nextInt();
+                    sc.nextLine();
+                if(pin1==pin) {
 
-                    if (withdrawAmount <= bank.getBalance()) {
-                        bank.setBalance(bank.getBalance() - withdrawAmount);
-                        System.out.println("You have successfully withdrawn. Your current balance is: " + bank.getBalance());
-                    }
-                        else {
-                        System.out.println("Insufficient funds. Withdrawal failed.");
-                    }
+                        System.out.println("Enter your amount to withdraw: ");
+                        double withdrawAmount = sc.nextDouble();
 
+                        if (withdrawAmount <= bank.getBalance()) {
+                            bank.setBalance(bank.getBalance() - withdrawAmount);
+                            System.out.println("You have successfully withdrawn. Your current balance is: " + bank.getBalance());
+                        } else {
+                            System.out.println("Insufficient funds. Withdrawal failed.");
+                        }
+                    }else {
+                        System.out.println("Enter correct pin");
+
+                    }
 
                 } else if (decision == 0) {
                     isTrue = false;
@@ -66,7 +68,6 @@ public class User {
                 } else {
                     System.out.println("Invalid choice! Please select 1 for deposit, 2 for withdraw, or 0 for exit.");
                 }
-
 
             } else {
                 System.out.println("Incorrect PIN. Please try again.");
